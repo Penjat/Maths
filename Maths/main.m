@@ -27,6 +27,7 @@ int main(int argc, const char * argv[]) {
             
             //check if should quit
             if([answerString isEqualToString:@"quit"]){
+                NSLog(@"goodbye.");
                 break;
             }
             NSNumber *intAnswer = @([answerString integerValue]);
