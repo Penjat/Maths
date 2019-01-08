@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
 #import "InputManager.h"
+#import "ScoreKeeper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BOOL isPlaying = YES;
         AdditionQuestion *questionMaker = [[AdditionQuestion alloc] init];
-        
+        ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         
         while(isPlaying){
         
@@ -31,10 +32,14 @@ int main(int argc, const char * argv[]) {
             NSNumber *intAnswer = @([answerString integerValue]);
             
             if([intAnswer isEqual:[questionMaker correctAnswer]]){
+                [scoreKeeper addToScore:YES];
                 NSLog(@"correct!");
+                
             }else{
+                [scoreKeeper addToScore:NO];
                 NSLog(@"Sorry, the answer is; %@ ",[questionMaker correctAnswer]);
             }
+            NSLog(@"%@", [scoreKeeper getStats]);
         }
     }
     return 0;
