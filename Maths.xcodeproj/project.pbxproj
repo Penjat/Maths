@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12E76ED21E4E9AD00DD2351 /* InputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E76EC21E4E9AD00DD2351 /* InputManager.m */; };
 		B1B914FC21E44FA000D65692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B914FB21E44FA000D65692 /* main.m */; };
 		B1B9150421E45CB400D65692 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B9150321E45CB400D65692 /* AdditionQuestion.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B12E76EB21E4E9AD00DD2351 /* InputManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
+		B12E76EC21E4E9AD00DD2351 /* InputManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputManager.m; sourceTree = "<group>"; };
 		B1B914F821E44FA000D65692 /* Maths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maths; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B914FB21E44FA000D65692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1B9150221E45CB400D65692 /* AdditionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				B1B914FB21E44FA000D65692 /* main.m */,
 				B1B9150221E45CB400D65692 /* AdditionQuestion.h */,
 				B1B9150321E45CB400D65692 /* AdditionQuestion.m */,
+				B12E76EB21E4E9AD00DD2351 /* InputManager.h */,
+				B12E76EC21E4E9AD00DD2351 /* InputManager.m */,
 			);
 			path = Maths;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12E76ED21E4E9AD00DD2351 /* InputManager.m in Sources */,
 				B1B914FC21E44FA000D65692 /* main.m in Sources */,
 				B1B9150421E45CB400D65692 /* AdditionQuestion.m in Sources */,
 			);

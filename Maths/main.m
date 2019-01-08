@@ -8,22 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "InputManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
         BOOL isPlaying = YES;
         AdditionQuestion *questionMaker = [[AdditionQuestion alloc] init];
+        
+        
         while(isPlaying){
         
-            char answerInput[10];
             NSLog(@"%@",[questionMaker createQuestion]);
-            fgets(answerInput,10,stdin);
-            NSString * answerString = [NSString stringWithCString:answerInput encoding:NSUTF8StringEncoding];
+            
+            NSString * answerString = [InputManager getUserInput];
             
             
-            answerString = [answerString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-           // NSNumber * answerNumber =
-            NSLog(@"%@",answerString);
+            //check if should quit
+            if([answerString isEqualToString:@"quit"]){
+                break;
+            }
             NSNumber *intAnswer = @([answerString integerValue]);
             
             if([intAnswer isEqual:[questionMaker correctAnswer]]){
