@@ -10,6 +10,7 @@
 #import "AdditionQuestion.h"
 #import "InputManager.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -17,10 +18,16 @@ int main(int argc, const char * argv[]) {
         BOOL isPlaying = YES;
         
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
+        QuestionManager * questionManager = [[QuestionManager alloc] init];
         
         while(isPlaying){
-            AdditionQuestion *questionMaker = [[AdditionQuestion alloc] init];
-            NSLog(@"%@",[questionMaker question]);
+            
+            //create a question maker
+            AdditionQuestion *question = [[AdditionQuestion alloc] init];
+            //add it to questionManager
+            [questionManager.questions addObject:question];
+            
+            NSLog(@"%@",[question question]);
             
             NSString * answerString = [InputManager getUserInput];
             
@@ -32,15 +39,16 @@ int main(int argc, const char * argv[]) {
             }
             NSNumber *intAnswer = @([answerString integerValue]);
             
-            if([intAnswer isEqual:[questionMaker correctAnswer]]){
+            if([intAnswer isEqual:[question correctAnswer]]){
                 [scoreKeeper addToScore:YES];
                 NSLog(@"correct!");
                 
             }else{
                 [scoreKeeper addToScore:NO];
-                NSLog(@"Sorry, the answer is; %@ ",[questionMaker correctAnswer]);
+                NSLog(@"Sorry, the answer is; %@ ",[question correctAnswer]);
             }
-            NSLog(@"time = %.02f",[questionMaker answerTime]);
+            NSLog(@"time = %.02f",[question answerTime]);
+            NSLog(@"%@",[questionManager timeOutput]);
             NSLog(@"%@", [scoreKeeper getStats]);
         }
     }

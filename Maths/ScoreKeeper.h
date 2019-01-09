@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)addToScore:(BOOL)wasCorrect;
 -(NSString*)getStats;
 
-@property NSNumber * rightAnswers;
-@property NSNumber * wrongAnswers;
+@property (nonatomic,strong)NSNumber * rightAnswers;
+@property (nonatomic,strong)NSNumber * wrongAnswers;
 @end
 
 NS_ASSUME_NONNULL_END
