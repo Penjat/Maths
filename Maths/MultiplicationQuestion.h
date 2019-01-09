@@ -1,5 +1,5 @@
 //
-//  SubtractionQuestion.h
+//  MultiplicationQuestion.h
 //  Maths
 //
 //  Created by Spencer Symington on 2019-01-09.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SubtractionQuestion : Question
+@interface MultiplicationQuestion : Question
 -(id)init;
 -(void)generateQuestion;
 @end

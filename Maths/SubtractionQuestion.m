@@ -7,6 +7,7 @@
 //
 
 #import "SubtractionQuestion.h"
+#import "Question.h"
 
 @implementation SubtractionQuestion
 - (instancetype)init {
@@ -14,5 +15,9 @@
         [self generateQuestion];
     }
     return self;
+}
+-(void)generateQuestion{
+    super.correctAnswer = @([self.leftValue integerValue] - [self.rightValue integerValue]);
+    super.question =  [NSString stringWithFormat:@"What is %@ - %@",self.leftValue,self.rightValue];
 }
 @end

@@ -25,6 +25,6 @@
     }
     NSNumber* averageTime = @([totalTime floatValue]/_questions.count);
     
-    return [NSString stringWithFormat:@"total time:%@s , average time:%@s",totalTime,averageTime];
+    return [NSString stringWithFormat:@"total time:%.02fs , average time:%.02fs",[totalTime doubleValue],[averageTime doubleValue]];
 }
 @end

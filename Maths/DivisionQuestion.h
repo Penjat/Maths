@@ -1,5 +1,5 @@
 //
-//  SubtractionQuestion.h
+//  DivisionQuestion.h
 //  Maths
 //
 //  Created by Spencer Symington on 2019-01-09.
@@ -8,10 +8,9 @@
 
 
 #import "Question.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SubtractionQuestion : Question
+@interface DivisionQuestion : Question
 -(id)init;
 -(void)generateQuestion;
 @end

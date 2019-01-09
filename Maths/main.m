@@ -10,10 +10,14 @@
 
 #import "Question.h"
 #import "AdditionQuestion.h"
+#import "SubtractionQuestion.h"
+#import "MultiplicationQuestion.h"
+#import "DivisionQuestion.h"
 
 #import "InputManager.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -22,15 +26,16 @@ int main(int argc, const char * argv[]) {
         
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         QuestionManager * questionManager = [[QuestionManager alloc] init];
+        QuestionFactory * questionFactory = [[QuestionFactory alloc] init];
         
         while(isPlaying){
             
             //create a question maker
-            AdditionQuestion *question = [[AdditionQuestion alloc] init];
+            Question *question = [questionFactory randomQuestion];
             //add it to questionManager
             [questionManager.questions addObject:question];
             
-            NSLog(@"%@",[question question]);
+            NSLog(@"\n\n\n%@ ",[question question]);
             
             NSString * answerString = [InputManager getUserInput];
             
@@ -52,7 +57,7 @@ int main(int argc, const char * argv[]) {
             }
             NSLog(@"time = %.02f",[question answerTime]);
             NSLog(@"%@",[questionManager timeOutput]);
-            NSLog(@"%@", [scoreKeeper getStats]);
+            NSLog(@"%@ ", [scoreKeeper getStats]);
         }
     }
     return 0;
