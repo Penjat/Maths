@@ -7,7 +7,7 @@
 //
 
 #import "QuestionManager.h"
-#import "AdditionQuestion.h"
+#import "Question.h"
 
 @implementation QuestionManager
 -(id)init{
@@ -20,7 +20,7 @@
 -(NSString*)timeOutput{
     NSNumber* totalTime = @0;
     
-    for (AdditionQuestion * question in self.questions) {
+    for (Question * question in self.questions) {
         totalTime = @([totalTime doubleValue] + [question answerTime] );
     }
     NSNumber* averageTime = @([totalTime floatValue]/_questions.count);

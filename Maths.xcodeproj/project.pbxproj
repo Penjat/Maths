@@ -11,7 +11,9 @@
 		B12E76F021E4ED5D00DD2351 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E76EF21E4ED5D00DD2351 /* ScoreKeeper.m */; };
 		B12E771521E59D9A00DD2351 /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E771421E59D9A00DD2351 /* QuestionManager.m */; };
 		B1B914FC21E44FA000D65692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B914FB21E44FA000D65692 /* main.m */; };
-		B1B9150421E45CB400D65692 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B9150321E45CB400D65692 /* AdditionQuestion.m */; };
+		B1B9150421E45CB400D65692 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B9150321E45CB400D65692 /* Question.m */; };
+		B1E5D31621E6563C006C499E /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5D31521E6563C006C499E /* AdditionQuestion.m */; };
+		B1E5D31921E658A3006C499E /* SubtractionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5D31821E658A3006C499E /* SubtractionQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +37,12 @@
 		B12E771421E59D9A00DD2351 /* QuestionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionManager.m; sourceTree = "<group>"; };
 		B1B914F821E44FA000D65692 /* Maths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maths; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B914FB21E44FA000D65692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B1B9150221E45CB400D65692 /* AdditionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
-		B1B9150321E45CB400D65692 /* AdditionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
+		B1B9150221E45CB400D65692 /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		B1B9150321E45CB400D65692 /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		B1E5D31421E6563C006C499E /* AdditionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
+		B1E5D31521E6563C006C499E /* AdditionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
+		B1E5D31721E658A3006C499E /* SubtractionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubtractionQuestion.h; sourceTree = "<group>"; };
+		B1E5D31821E658A3006C499E /* SubtractionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubtractionQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +78,12 @@
 				B1B914FB21E44FA000D65692 /* main.m */,
 				B12E76EE21E4ED5D00DD2351 /* ScoreKeeper.h */,
 				B12E76EF21E4ED5D00DD2351 /* ScoreKeeper.m */,
-				B1B9150221E45CB400D65692 /* AdditionQuestion.h */,
-				B1B9150321E45CB400D65692 /* AdditionQuestion.m */,
+				B1B9150221E45CB400D65692 /* Question.h */,
+				B1B9150321E45CB400D65692 /* Question.m */,
+				B1E5D31421E6563C006C499E /* AdditionQuestion.h */,
+				B1E5D31521E6563C006C499E /* AdditionQuestion.m */,
+				B1E5D31721E658A3006C499E /* SubtractionQuestion.h */,
+				B1E5D31821E658A3006C499E /* SubtractionQuestion.m */,
 				B12E76EB21E4E9AD00DD2351 /* InputManager.h */,
 				B12E76EC21E4E9AD00DD2351 /* InputManager.m */,
 				B12E771321E59D9A00DD2351 /* QuestionManager.h */,
@@ -139,10 +149,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B12E771521E59D9A00DD2351 /* QuestionManager.m in Sources */,
+				B1E5D31621E6563C006C499E /* AdditionQuestion.m in Sources */,
+				B1E5D31921E658A3006C499E /* SubtractionQuestion.m in Sources */,
 				B12E76F021E4ED5D00DD2351 /* ScoreKeeper.m in Sources */,
 				B12E76ED21E4E9AD00DD2351 /* InputManager.m in Sources */,
 				B1B914FC21E44FA000D65692 /* main.m in Sources */,
-				B1B9150421E45CB400D65692 /* AdditionQuestion.m in Sources */,
+				B1B9150421E45CB400D65692 /* Question.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

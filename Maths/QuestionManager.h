@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class AdditionQuestion;
+@class Question;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QuestionManager : NSObject
-@property (nonatomic,strong) NSMutableArray<AdditionQuestion*> * questions;
+@property (nonatomic,strong) NSMutableArray<Question*> * questions;
 -(id)init;
 -(NSString*)timeOutput;
 @end
