@@ -11,11 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AdditionQuestion : NSObject
+@property (nonatomic,strong) NSString * question;
 @property (nonatomic,strong) NSNumber * correctAnswer;
 @property (nonatomic,strong) NSDate * startTime;
 @property (nonatomic,strong) NSDate * endTime;
 
--(NSString*)createQuestion;
+-(id)init;
+
 -(NSTimeInterval)answerTime;
 @end
 

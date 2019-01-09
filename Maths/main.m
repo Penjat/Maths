@@ -15,12 +15,12 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BOOL isPlaying = YES;
-        AdditionQuestion *questionMaker = [[AdditionQuestion alloc] init];
+        
         ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
         
         while(isPlaying){
-        
-            NSLog(@"%@",[questionMaker createQuestion]);
+            AdditionQuestion *questionMaker = [[AdditionQuestion alloc] init];
+            NSLog(@"%@",[questionMaker question]);
             
             NSString * answerString = [InputManager getUserInput];
             
