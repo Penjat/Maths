@@ -40,6 +40,7 @@ int main(int argc, const char * argv[]) {
                 [scoreKeeper addToScore:NO];
                 NSLog(@"Sorry, the answer is; %@ ",[questionMaker correctAnswer]);
             }
+            NSLog(@"time = %d",[AdditionQuestion ])
             NSLog(@"%@", [scoreKeeper getStats]);
         }
     }

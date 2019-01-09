@@ -21,6 +21,7 @@
     //returns a NSString with the number correct, the number wrong, and the percent correct to ) decimal places
     NSNumber * percentCorrect =
     @(([_rightAnswers floatValue]/([_rightAnswers floatValue]+[_wrongAnswers floatValue]))*100);
+    
     return [NSString stringWithFormat:@"score: %li right , %li wrong , %li%% correct",[_rightAnswers integerValue],[_wrongAnswers integerValue],[percentCorrect integerValue]];
 }
 @end
